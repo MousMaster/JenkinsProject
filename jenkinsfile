@@ -16,9 +16,9 @@ pipeline {
 
         APP_NAME = "ahmeddamou"
 
-        STG_API_ENDPOINT = "192.168.99.25:1993"
+        STG_API_ENDPOINT = "ip10-0-4-4-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr"
     //    STG_APP_ENDPOINT = "192.168.99.25:${PORT_EXPOSED}90"
-        PROD_API_ENDPOINT = "192.168.99.25:1993"
+        PROD_API_ENDPOINT = "ip10-0-4-3-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr"
     //    PROD_APP_ENDPOINT = "192.168.99.25:${PORT_EXPOSED}"
     
         INTERNAL_PORT = "80"
