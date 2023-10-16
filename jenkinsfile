@@ -34,7 +34,7 @@ pipeline {
           sh 'pwd'
           sh 'ls'
           
-          sh "docker build -t test . "
+          sh "docker build -t '${CONTAINER_IMAGE}' . "
         }
     }
 }
