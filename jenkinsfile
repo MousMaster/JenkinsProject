@@ -11,9 +11,9 @@ pipeline {
         DOCKERHUB_ID = "choco1992"
         DOCKERHUB_PASSWORD = credentials('dockerhub_password')
         APP_NAME = "ulrich"
-        STG_API_ENDPOINT = "172.28.128.140:1993"
+        STG_API_ENDPOINT = "ip10-0-4-4-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr"
         STG_APP_ENDPOINT = "172.28.128.140:${PORT_EXPOSED}90"
-        PROD_API_ENDPOINT = "172.28.128.140:1993"
+        PROD_API_ENDPOINT = "ip10-0-4-3-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr"
         PROD_APP_ENDPOINT = "172.28.128.140:${PORT_EXPOSED}"
         INTERNAL_PORT = "80"
         EXTERNAL_PORT = "${PORT_EXPOSED}"
@@ -29,7 +29,7 @@ pipeline {
               }
            }
        }
-     /*   stage('Run container based on builded image') {
+        stage('Run container based on builded image') {
           agent any
           steps {
             script {
@@ -111,6 +111,6 @@ pipeline {
       failure {
             slackSend (color: '#FF0000', message: "ULRICH - FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
           }   
-      */ 
+    
       }
 }
