@@ -26,15 +26,15 @@ pipeline {
         CONTAINER_IMAGE = "${DOCKERHUB_ID}/${IMAGE_NAME}:${IMAGE_TAG}"
     }
     agent none
-    stages {
-       stage('Build image') {
-           agent any
-           steps {
-              script {
-                sh "docker build -t ${DOCKERHUB_ID}/$IMAGE_NAME:$IMAGE_TAG ."
-              }
-           }
-       }
+    stage('Build image') {
+      agent any
+      steps {
+          script {
+              sh "docker build -t ${DOCKERHUB_ID}/${IMAGE_NAME}:${IMAGE_TAG} ."
+          }
+      }
+      }
+
        /* stage('Run container based on builded image') {
           agent any
           steps {
