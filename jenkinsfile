@@ -1,5 +1,5 @@
 /* import shared library */
-@Library('chocoapp-slack-share-library')_
+//@Library('chocoapp-slack-share-library')_
 
 pipeline {
     environment {
@@ -111,5 +111,6 @@ pipeline {
       failure {
             slackSend (color: '#FF0000', message: "ULRICH - FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
           }   
-    }  */ 
+      */ 
+      }
 }
