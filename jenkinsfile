@@ -8,7 +8,7 @@ pipeline {
         IMAGE_TAG = "latest"
         STAGING = "chocoapp-staging"
         PRODUCTION = "chocoapp-prod"
-        DOCKERHUB_ID = "choco1992"
+        DOCKERHUB_ID = "mous172782"
         DOCKERHUB_PASSWORD = credentials('dockerhub_password')
         APP_NAME = "ulrich"
         STG_API_ENDPOINT = "http://ip10-0-1-3-ckorjk15aj7gqct7edvg-1993.direct.docker.labs.eazytraining.fr"
