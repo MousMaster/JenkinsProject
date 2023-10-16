@@ -42,16 +42,16 @@ pipeline {
              }
           }
        }
-   /*     stage('Test image') {
+       stage('Test image') {
            agent any
            steps {
               script {
                 sh '''
-                   curl -v http://ip10-0-4-3-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr | grep -i "Dimension"
+                   curl -v ip10-0-4-3-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr | grep -i "Dimension"
                 '''
               }
            }
-       } */
+       } 
        stage('Clean container') {
           agent any
           steps {
