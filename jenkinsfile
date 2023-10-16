@@ -34,7 +34,7 @@ pipeline {
           sh 'pwd'
           sh 'ls'
           
-          sh "docker build -t '${CONTAINER_IMAGE}' . "
+          sh "docker build -t ${DOCKERHUB_ID}/${IMAGE_NAME}:${IMAGE_TAG} . "
         }
     }
 }
