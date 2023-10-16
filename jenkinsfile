@@ -47,7 +47,7 @@ pipeline {
            steps {
               script {
                 sh '''
-                   curl -v 172.17.0.1:$APP_EXPOSED_PORT | grep -i "Dimension"
+                   curl -v ip10-0-4-4-ckopqn15aj7gqct7edsg-80.direct.docker.labs.eazytraining.fr:$APP_EXPOSED_PORT | grep -i "Dimension"
                 '''
               }
            }
