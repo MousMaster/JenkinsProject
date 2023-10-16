@@ -31,10 +31,8 @@ pipeline {
     agent any
     steps {
         script {
-          sh 'pwd'
-          sh 'ls'
-          
-          sh "docker build -t ${DOCKERHUB_ID}/${IMAGE_NAME}:${IMAGE_TAG} . "
+            def imageName = "${DOCKERHUB_ID}/${IMAGE_NAME}:${IMAGE_TAG}"
+            sh "docker build -t ${imageName} ."
         }
     }
 }
