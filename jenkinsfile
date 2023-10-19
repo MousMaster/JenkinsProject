@@ -1,7 +1,7 @@
 /* import shared library */
 // pour envoyer des msgs au slack 
 
-@Library('chocoapp-slack-share-library')_
+//@Library('chocoapp-slack-share-library')_
 
 pipeline {
     environment {
